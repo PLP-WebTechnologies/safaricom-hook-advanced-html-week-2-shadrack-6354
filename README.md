@@ -20,6 +20,38 @@ Create an HTML webpage that includes the following:
 
 **Example Output:**  
 A webpage where users can play an audio track and watch a video.  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio and Video</title>
+</head>
+<body>
+    <h1>Audio and Video Elements</h1>
+
+    <!-- Audio -->
+    <section>
+        <h2>Audio Player</h2>
+        <audio controls>
+            <source src="audio-file.mp3" type="audio/mp3">
+            <source src="audio-file.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <!-- Video -->
+    <section>
+        <h2>Video Player</h2>
+        <video controls poster="video-poster.jpg">
+            <source src="video-file.mp4" type="video/mp4">
+            <source src="video-file.webm" type="video/webm">
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+</body>
+</html>
 
 ---
 
@@ -44,5 +76,50 @@ Design a user registration form with the following requirements:
 
 **Example Output:**  
 A user-friendly registration form that prevents submission if required fields are not filled correctly.  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Registration Form</title>
+</head>
+<body>
+    <h1>User Registration Form</h1>
 
+    <form action="/submit" method="POST">
+        <!-- Full Name -->
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required maxlength="100" placeholder="Enter your full name"><br><br>
+
+        <!-- Email Address -->
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email" /><br><br>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="8" placeholder="Enter your password" /><br><br>
+
+        <!-- Age -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required min="18" placeholder="Enter your age" /><br><br>
+
+        <!-- Gender -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br><br>
+
+        <!-- Terms and Conditions -->
+        <label>
+            <input type="checkbox" id="terms" name="terms" required>
+            I agree to the <a href="#">Terms and Conditions</a>
+        </label><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Register</button>
+    </form>
+
+</body>
+</html>
 ---
